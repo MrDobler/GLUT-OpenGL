@@ -23,33 +23,33 @@ void Desenha(void)
 
 
     //Cria a casa
-
-    glPushMatrix();
     glScalef(escala, escala, 1);
-        glBegin(GL_QUADS);
-            glColor3f( 1, 1, 1);
-            glVertex2f(-18, 0);
-            glVertex2f(-18, 4);
-            glVertex2f(-12, 4);
-            glVertex2f(-12, 0);
-        glEnd();
 
-        glBegin(GL_TRIANGLES);
-            glColor3f( 0.255, 0, 0);
-            glVertex2f(-18, 4);
-            glVertex2f(-12, 4);
-            glVertex2f(-15 ,6);
-        glEnd();
-    glPopMatrix();
+	glPushMatrix();
+		glBegin(GL_QUADS);
+			glColor3f( 1, 1, 1);
+			glVertex2f(-18, 0);
+			glVertex2f(-18, 4);
+			glVertex2f(-12, 4);
+			glVertex2f(-12, 0);
+		glEnd();
+
+		glBegin(GL_TRIANGLES);
+			glColor3f( 0.255, 0, 0);
+			glVertex2f(-18, 4);
+			glVertex2f(-12, 4);
+			glVertex2f(-15 ,6);
+		glEnd();
+	glPopMatrix();
 
     //Cria a rua
-		glBegin(GL_QUADS);
-			glColor3f( 0.176, 0.176, 0.176);
-			glVertex2f(-8, 0);
-			glVertex2f(-2, 20);
-			glVertex2f( 2, 20);
-			glVertex2f( 8, 0);
-		glEnd();
+	glBegin(GL_QUADS);
+		glColor3f( 0.176, 0.176, 0.176);
+		glVertex2f(-8, 0);
+		glVertex2f(-2, 20);
+		glVertex2f( 2, 20);
+		glVertex2f( 8, 0);
+	glEnd();
 
     //Cria a árvore
 	glBegin(GL_POLYGON);
