@@ -3,9 +3,9 @@
 #include <windows.h>
 
 
-GLfloat escala = 2;
+GLfloat escala = 1.0f;
 
-void Desenha(void)
+void desenha(void)
 {
     //glClear(), limpa o buffer de cores.
     glClear(GL_COLOR_BUFFER_BIT);
@@ -23,9 +23,7 @@ void Desenha(void)
 
 
     //Cria a casa
-    glScalef(escala, escala, 1);
 
-	glPushMatrix();
 		glBegin(GL_QUADS);
 			glColor3f( 1, 1, 1);
 			glVertex2f(-18, 0);
@@ -40,7 +38,7 @@ void Desenha(void)
 			glVertex2f(-12, 4);
 			glVertex2f(-15 ,6);
 		glEnd();
-	glPopMatrix();
+
 
     //Cria a rua
 	glBegin(GL_QUADS);
@@ -72,20 +70,58 @@ void Desenha(void)
 		glVertex2f( 16, 0);
 	glEnd();
 
-    //Cria o carro
-	 glBegin(GL_QUADS);
-		glColor3f( 0, 0, 1);
+    //Cria a lataria do carro
+	glBegin(GL_QUADS);
+		glColor3f(0.137255, 0.137255, 0.556863);
 		glVertex2f(-3, 2);
 		glVertex2f(-3, 4);
 		glVertex2f( 3, 4);
 		glVertex2f( 3, 2);
 	glEnd();
 
+	//Cria as rodas do carro
+	glBegin(GL_QUADS);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-2.5, 1.5);
+		glVertex2f(-2.5, 2);
+		glVertex2f(-1.5, 2);
+		glVertex2f(-1.5, 1.5);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glColor3f( 0, 0, 0);
+		glVertex2f( 1.5, 1.5);
+		glVertex2f( 1.5, 2);
+		glVertex2f( 2.5, 2);
+		glVertex2f( 2.5, 1.5);
+	glEnd();
+
+
+	//Cria lanternas do carro
+	glBegin(GL_QUADS);
+		glColor3f( 1, 0, 0);
+		glVertex2f( -2.5, 3);
+		glVertex2f( -2.5, 3.5);
+		glVertex2f( -1, 3.5);
+		glVertex2f( -1, 3);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glColor3f( 1, 0, 0);
+		glVertex2f( 1, 3);
+		glVertex2f( 1, 3.5);
+		glVertex2f( 2.5, 3.5);
+		glVertex2f( 2.5, 3);
+	glEnd();
+
+
+	glutSwapBuffers();
+
     glFlush();
 }
 
-
-void Tecla(unsigned char tecla, GLint x, GLint y)
+//Função que faz a interação entre o programa e o usuario via teclado.
+void teclado(unsigned char tecla, GLint x, GLint y)
 {
     switch(tecla)
     {
@@ -96,8 +132,9 @@ void Tecla(unsigned char tecla, GLint x, GLint y)
             escala--;
             break;
     }
-    Desenha();
+    desenha();
 }
+
 
 int main(int argc, char *argv[])
 {
@@ -106,9 +143,9 @@ int main(int argc, char *argv[])
     glutInitWindowPosition(320, 90);
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     glutCreateWindow("Trabalho CG GLUT/OpenGL");
-    glutKeyboardFunc(Tecla);
-    glutDisplayFunc(Desenha);
-    glClearColor(0,0.756,0,0);
+    glutKeyboardFunc(teclado);
+    glutDisplayFunc(desenha);
+    glClearColor(0.137255,0.556863,0.137255,0);
     glutMainLoop();
 
     return 0;
