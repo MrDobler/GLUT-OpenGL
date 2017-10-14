@@ -2,8 +2,9 @@
 #include <GL/glut.h>
 #include <windows.h>
 
-
+//Variáveis que controlam a animação do carro.
 GLfloat escala = 1.0f;
+GLfloat move = 0.0f;
 
 void desenha(void)
 {
@@ -11,19 +12,17 @@ void desenha(void)
     glClear(GL_COLOR_BUFFER_BIT);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    //gluOrtho2D delimita os limites do plano cartesiano
-    //dentro da janela
+
+    /*
+    *gluOrtho2D delimita os limites do plano cartesiano
+    *dentro da janela
+    */
     gluOrtho2D(-20,20,0,20);
-
-
-
-
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
 
 
     //Cria a casa
-
 	glBegin(GL_QUADS);
 		glColor3f( 1, 1, 1);
 		glVertex2f(-18, 0);
@@ -88,8 +87,15 @@ void desenha(void)
 		glVertex2f( 16, 0);
 	glEnd();
 
+	/*
+	 *glPushMatrix()/glPopMatrix transforma vários objetos
+	 *em um único bloco que pode ser manipulado.
+	 */
+
 	glPushMatrix();
+		glTranslatef(0, move, 0.0f);
 		glScalef(escala, escala, 0.0f);
+
 		//Cria a lataria do carro
 		glBegin(GL_QUADS);
 			glColor3f(0.137255, 0.137255, 0.556863);
@@ -117,7 +123,6 @@ void desenha(void)
 			glVertex2f( 2, 4);
 		glEnd();
 
-
 		//Cria as rodas do carro
 		glBegin(GL_QUADS);
 			glColor3f( 0, 0, 0);
@@ -134,7 +139,6 @@ void desenha(void)
 			glVertex2f( 2.5, 2);
 			glVertex2f( 2.5, 1.5);
 		glEnd();
-
 
 		//Cria lanternas do carro
 		glBegin(GL_QUADS);
@@ -161,24 +165,25 @@ void desenha(void)
 			glVertex2f( 0.5, 2.8);
 			glVertex2f( 0.5, 2.5);
 		glEnd();
-
 	glPopMatrix();
 
+	//Não excluir isto
 	glutSwapBuffers();
-
     glFlush();
 }
 
 //Função que faz a interação entre o programa e o usuario via teclado.
 void teclado(unsigned char tecla, GLint x, GLint y)
 {
-    switch(tecla)
+	switch(tecla)
     {
         case '+':
             escala = escala + 0.1;
+            move = move -4;
             break;
         case '-':
             escala = escala - 0.1;
+        	move = move + 4;
             break;
     }
     desenha();
