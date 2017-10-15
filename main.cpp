@@ -32,12 +32,57 @@ void desenha(void)
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
-		glColor3f( 0.255, 0, 0);
+		glColor3f( 0.5, 0, 0);
 		glVertex2f(-18, 4);
 		glVertex2f(-12, 4);
 		glVertex2f(-15 ,6);
 	glEnd();
 
+	//Cria a janela da casa
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-17, 1.5);
+		glVertex2f(-17, 3);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-17, 3);
+		glVertex2f(-15, 3);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-15, 3);
+		glVertex2f(-15, 1.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-15, 1.5);
+		glVertex2f(-17, 1.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-17, 2.2);
+		glVertex2f(-15, 2.2);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f( 0, 0, 0);
+		glVertex2f(-16, 1.5);
+		glVertex2f(-16, 3);
+	glEnd();
+
+	//Cria a Porta da Casa
+	glBegin(GL_QUADS);
+	glColor3f( 0.250, 0.100, 0.056);
+		glVertex2f(-14, 0);
+		glVertex2f(-14, 2);
+		glVertex2f(-12.5, 2);
+		glVertex2f(-12.5, 0);
+	glEnd();
 
     //Cria a rua
 	glBegin(GL_QUADS);
@@ -88,8 +133,9 @@ void desenha(void)
 	glEnd();
 
 	/*
-	 *glPushMatrix()/glPopMatrix transforma vários objetos
-	 *em um único bloco que pode ser manipulado.
+	 *	glPushMatrix()/glPopMatrix transforma vários objetos
+	 *	em um único bloco que pode ser manipulado.
+	 *
 	 */
 
 	glPushMatrix();
