@@ -386,12 +386,76 @@ void desenha(void)
 	glEnd();
 
 	glBegin(GL_QUADS);
-			glColor3f( 0.250, 0.100, 0.056);
-			glVertex2f(-16, 12);
-			glVertex2f(-16, 13);
-			glVertex2f(-15.5, 13);
-			glVertex2f(-15.5, 12);
+		glColor3f( 0.250, 0.100, 0.056);
+		glVertex2f(-16, 12);
+		glVertex2f(-16, 13);
+		glVertex2f(-15.5, 13);
+		glVertex2f(-15.5, 12);
 	glEnd();
+
+
+	//Cria o Chafariz
+	glBegin(GL_QUADS);
+		glColor3f( 0.5, 0.5, 0.5);
+		glVertex2f( 8, 13.5);
+		glVertex2f( 8, 14.5);
+		glVertex2f( 10.5, 14.5);
+		glVertex2f( 10.5, 13.5);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glColor3f( 0.3, 0.3, 0.3);
+		glVertex2f( 8, 13.5);
+		glVertex2f( 7.5, 14);
+		glVertex2f( 7.5, 15);
+		glVertex2f( 8, 14.5);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glColor3f( 0.4, 0.4, 0.4);
+		glVertex2f( 10.5, 13.5);
+		glVertex2f( 10.5, 14.5);
+		glVertex2f( 11, 15);
+		glVertex2f( 11, 14);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+		glColor3f(0.6, 0.6, 0.6);
+		glVertex2f( 8, 14.5);
+		glVertex2f( 7.5, 15);
+		glVertex2f( 8, 15.5);
+		glVertex2f(10.5, 15.5);
+		glVertex2f( 11, 15);
+		glVertex2f( 10.5, 14.5);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+		glColor3f(0, 0, 1);
+		glVertex2f( 8.2, 14.6);
+		glVertex2f( 8, 15);
+		glVertex2f( 8.3, 15.4);
+		glVertex2f( 10.3, 15.4);
+		glVertex2f( 10.6, 15);
+		glVertex2f(10.4, 14.6);
+	glEnd();
+
+	glBegin(GL_POLYGON);
+		glColor3f(0.6, 0.6, 0.6);
+		glVertex2f( 8.8, 14.6);
+		glVertex2f( 8.55, 14.7);
+		glVertex2f( 9.23, 18.0);
+		glVertex2f( 10, 14.7);
+		glVertex2f( 9.75, 14.6);
+	glEnd();
+
+	glBegin(GL_QUADS);
+		glColor3f(0, 0, 1);
+		glVertex2f( 9.2, 14.6);
+		glVertex2f( 9.2, 16.6);
+		glVertex2f( 9.3, 16.6);
+		glVertex2f( 9.3, 14.6);
+	glEnd();
+
 
 
 	/*
