@@ -24,7 +24,7 @@ void desenha(void)
 
     //Cria a casa
 	glBegin(GL_QUADS);
-		glColor3f( 1, 1, 1);
+		glColor3f( 0.6, 1, 1);
 		glVertex2f(-18, 0);
 		glVertex2f(-18, 4);
 		glVertex2f(-12, 4);
@@ -32,7 +32,7 @@ void desenha(void)
 	glEnd();
 
 	glBegin(GL_TRIANGLES);
-		glColor3f( 0.5, 0, 0);
+		glColor3f( 0, 0, 0);
 		glVertex2f(-18, 4);
 		glVertex2f(-12, 4);
 		glVertex2f(-15 ,6);
@@ -131,6 +131,268 @@ void desenha(void)
 		glVertex2f( 16, 4);
 		glVertex2f( 16, 0);
 	glEnd();
+
+	//Cria o apartamento
+	glBegin(GL_QUADS);
+			glColor3f(0.216, 0.216, 0.191);
+			glVertex2f(-12, 12);
+			glVertex2f(-7, 12);
+			glVertex2f(-7, 19);
+			glVertex2f(-12, 19);
+		glEnd();
+
+	//Cria a Porta do apartamento
+	glBegin(GL_QUADS);
+		glColor3f( 1, 1, 1);
+		glVertex2f(-10, 12);
+		glVertex2f(-10, 13.5);
+		glVertex2f(-9, 13.5);
+		glVertex2f(-9, 12);
+	glEnd();
+
+	//Cria uma janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f( 1, 1, 1);
+		glVertex2f(-11, 17.5);
+		glVertex2f(-11, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 18.5);
+		glVertex2f(-10, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 18.5);
+		glVertex2f(-10, 17.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 17.5);
+		glVertex2f(-11, 17.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10.5, 17.5);
+		glVertex2f(-10.5, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 18);
+		glVertex2f(-10, 18);
+	glEnd();
+
+	//Cria outra janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 16);
+		glVertex2f(-11, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 17);
+		glVertex2f(-10, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 17);
+		glVertex2f(-10, 16);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 16);
+		glVertex2f(-11, 16);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10.5, 16);
+		glVertex2f(-10.5, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 16.5);
+		glVertex2f(-10, 16.5);
+	glEnd();
+
+	//Cria mais outra janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 14.5);
+		glVertex2f(-11, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 15.5);
+		glVertex2f(-10, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 15.5);
+		glVertex2f(-10, 14.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10, 14.5);
+		glVertex2f(-11, 14.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-10.5, 14.5);
+		glVertex2f(-10.5, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-11, 15);
+		glVertex2f(-10, 15);
+	glEnd();
+
+	//Cria uma janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 17.5);
+		glVertex2f(-9, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 18.5);
+		glVertex2f(-8, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 18.5);
+		glVertex2f(-8, 17.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 17.5);
+		glVertex2f(-9, 17.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8.5, 17.5);
+		glVertex2f(-8.5, 18.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 18);
+		glVertex2f(-8, 18);
+	glEnd();
+
+	//Cria outra janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 16);
+		glVertex2f(-9, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 17);
+		glVertex2f(-8, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 17);
+		glVertex2f(-8, 16);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 16);
+		glVertex2f(-9, 16);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8.5, 16);
+		glVertex2f(-8.5, 17);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 16.5);
+		glVertex2f(-8, 16.5);
+	glEnd();
+
+	//Cria mais outra janela do apartamento
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 14.5);
+		glVertex2f(-9, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 15.5);
+		glVertex2f(-8, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 15.5);
+		glVertex2f(-8, 14.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8, 14.5);
+		glVertex2f(-9, 14.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-8.5, 14.5);
+		glVertex2f(-8.5, 15.5);
+	glEnd();
+
+	glBegin(GL_LINES);
+		glColor3f(1, 1, 1);
+		glVertex2f(-9, 15);
+		glVertex2f(-8, 15);
+	glEnd();
+
+	//Cria outra árvore
+	glBegin(GL_POLYGON);
+		glColor3f(0, 0.210, 0);
+		glVertex2f(-16, 13);
+		glVertex2f(-16.4, 13.4);
+		glVertex2f(-16.4, 13.8);
+		glVertex2f(-16, 14.2);
+		glVertex2f(-15.5, 14.2);
+		glVertex2f(-15, 13.8);
+		glVertex2f(-15, 13.4);
+		glVertex2f(-15.5, 13);
+	glEnd();
+
+	glBegin(GL_QUADS);
+			glColor3f( 0.250, 0.100, 0.056);
+			glVertex2f(-16, 12);
+			glVertex2f(-16, 13);
+			glVertex2f(-15.5, 13);
+			glVertex2f(-15.5, 12);
+	glEnd();
+
 
 	/*
 	 *	glPushMatrix()/glPopMatrix transforma vários objetos
