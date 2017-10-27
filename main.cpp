@@ -2,7 +2,7 @@
 #include <GL/glut.h>
 #include <windows.h>
 
-//Variáveis que controlam a animação do carro.
+//VariÃ¡veis que controlam a animaÃ§Ã£o do carro.
 GLfloat escala = 1.0f;
 GLfloat move = 0.0f;
 
@@ -111,7 +111,7 @@ void desenha(void)
 		glVertex2f(  8, 0);
 	glEnd();
 
-    //Cria a árvore
+    //Cria a Ã¡rvore
 	glBegin(GL_POLYGON);
 		glColor3f( 0, 0.210, 0);
 		glVertex2f( 14, 4);
@@ -372,7 +372,7 @@ void desenha(void)
 		glVertex2f(-8, 15);
 	glEnd();
 
-	//Cria outra árvore
+	//Cria outra Ã¡rvore
 	glBegin(GL_POLYGON);
 		glColor3f(0, 0.210, 0);
 		glVertex2f(-16, 13);
@@ -459,8 +459,8 @@ void desenha(void)
 
 
 	/*
-	 *	glPushMatrix()/glPopMatrix transforma vários objetos
-	 *	em um único bloco que pode ser manipulado.
+	 *	glPushMatrix()/glPopMatrix transforma vÃ¡rios objetos
+	 *	em um Ãºnico bloco que pode ser manipulado.
 	 *
 	 */
 
@@ -539,12 +539,12 @@ void desenha(void)
 		glEnd();
 	glPopMatrix();
 
-	//Não excluir isto
-	glutSwapBuffers();
+	//NÃ£o excluir isto
+    glutSwapBuffers();
     glFlush();
 }
 
-//Função que faz a interação entre o programa e o usuario via teclado.
+//FunÃ§Ã£o que faz a interaÃ§Ã£o entre o programa e o usuario via teclado.
 void teclado(unsigned char tecla, GLint x, GLint y)
 {
 	switch(tecla)
